@@ -1,7 +1,10 @@
 # My Python Cybersecurity Progression
 
 ## Level 1 - Python Foundations
-- [ ] Password Generator -— 40% mastery — Steps 1 & 2 in progress, bug on pool building and bool conversion not yet mastered
+- [ ] Password Generator -—
+ 40% mastery — Steps 1 & 2 in progress, bug on pool building and bool conversion not yet mastered  
+70% mastery — Steps 1-4 complete, mini challenge done, score function has bugs being fixed
+
 - [ ] Text Analyzer
 - [ ] Log Parser
 - [ ] Todo CLI

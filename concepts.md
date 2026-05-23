@@ -32,3 +32,27 @@ Example : def build_password(length): ... return password
 Definition : x += y is identical to x = x + y, used to accumulate values
 Example : password += random.choice(pool) adds one character each iteration
 
+while True / break
+
+Definition : while True loops forever until a break statement is hit — used to keep asking for input until valid
+Example : while True: x = input("y/n? ") \ if x == "y" or x == "n": break
+
+try / except
+
+Definition : try attempts a risky block, except ErrorType catches the crash and runs a fallback instead
+Example : try: x = int(input("number? ")) \ except ValueError: print("not a number")
+
+string methods — isupper / islower / isdigit
+
+Definition : called on a single character with (), returns True or False — must include parentheses to actually call the method
+Example : "A".isupper() returns True, "1".isdigit() returns True
+
+bool flag pattern
+
+Definition : set a variable to False before a loop, set it to True inside when condition is met, check it after the loop to add points or trigger logic once
+Example : has_digit = False \ for char in password: \ if char.isdigit(): has_digit = True \ if has_digit: score += 20
+
+len()
+
+Definition : returns the number of characters in a string or items in a list
+Example : len("hello") returns 5
