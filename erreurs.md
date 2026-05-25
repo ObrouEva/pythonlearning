@@ -59,3 +59,21 @@ Bug — Password Generator Step 4
 Bug : special character check if element in special placed outside the for loop
 Cause : indentation error — only checks the last character of the password
 Fix : move inside the loop, or use a bool flag pattern with string.punctuation
+
+Bug — Password Generator Step 5
+
+Bug : length = '' inside build_password overwrote the parameter
+Cause : confused parameter with local variable initialization
+Fix : remove the line — length already comes in as a parameter, no need to declare it
+
+Bug — Password Generator Step 5
+
+Bug : main block code scattered between function definitions
+Cause : calling functions like length = ask_length() before all functions were defined
+Fix : define all functions first, then run main block at the very bottom
+
+Bug — Password Generator Step 6
+
+Bug : flags has_lower, has_upper etc initialized inside the loop instead of before it
+Cause : misplaced indentation — flags were reset on every iteration
+Fix : initialize all flags to False before the for loop, set to True inside

@@ -56,3 +56,18 @@ len()
 
 Definition : returns the number of characters in a string or items in a list
 Example : len("hello") returns 5
+
+file writing — open / write / with
+
+Definition : open('file.txt', 'w') creates or overwrites a file. f.write(text) writes a string. with closes the file automatically when done
+Example : with open('passwords.txt', 'w') as f: f.write(password + '\n')
+
+function structure — define first, call after
+
+Definition : all functions must be defined before the main block runs. Python reads top to bottom — calling a function before defining it causes a NameError
+Example : define ask_length(), build_password(), calculate_score() first, then call them in the main block at the bottom
+
+return vs break
+
+Definition : break exits a loop. return exits a function AND sends a value back to the caller
+Example : inside ask_length(), use return length instead of break so the value is passed back
