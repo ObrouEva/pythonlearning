@@ -71,3 +71,33 @@ return vs break
 
 Definition : break exits a loop. return exits a function AND sends a value back to the caller
 Example : inside ask_length(), use return length instead of break so the value is passed back
+
+ictionary — key/value pairs
+
+Definition : {} stores data as key:value pairs. Access by key, not by position. Keys must be unique.
+Example : word_count["python"] = 4 — key is "python", value is 4
+
+dictionary — if/else counting pattern
+
+Definition : check if key exists first, add 1 if yes, create at 1 if no
+Example : if word in word_count: word_count[word] += 1 else: word_count[word] = 1
+
+.items() and tuple unpacking
+
+Definition : .items() returns each key-value pair as a tuple. Two variables unpack both at once.
+Example : for word, count in word_count.items(): print(word, count)
+
+f-strings
+
+Definition : f"" strings let you embed any variable directly inside a string — Python converts automatically
+Example : f"{word} : {count}" — no need for str() or +
+
+sorted() with lambda
+
+Definition : sorted(list, key=lambda x: x[1], reverse=True) sorts by the second element of each pair, highest first
+Example : sorted(word_count.items(), key=lambda x: x[1], reverse=True) sorts words by frequency
+
+list slicing
+
+Definition : [:n] takes only the first n items from a list
+Example : sorted_words[:3] returns only the top 3 words

@@ -77,3 +77,9 @@ Bug — Password Generator Step 6
 Bug : flags has_lower, has_upper etc initialized inside the loop instead of before it
 Cause : misplaced indentation — flags were reset on every iteration
 Fix : initialize all flags to False before the for loop, set to True inside
+
+Bug — Text Analyzer Step 2
+
+Bug : numbered output not printed (1. 2. 3.)
+Cause : missed detail in the exercise requirements
+Fix : use enumerate() or a counter variable to add numbers before each line
