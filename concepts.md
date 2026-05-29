@@ -101,3 +101,28 @@ list slicing
 
 Definition : [:n] takes only the first n items from a list
 Example : sorted_words[:3] returns only the top 3 words
+
+file reading — open / read / with
+
+Definition : open('file.txt', 'r') opens existing file for reading. f.read() returns full content as string. 'r' = read, 'w' = write/create, 'a' = append
+Example : with open('sample.txt', 'r') as f: text = f.read()
+
+set() for unique values
+
+Definition : set() removes all duplicates automatically. len(set(words)) counts unique items
+Example : len(set(['python', 'is', 'python'])) returns 2
+
+list slicing with [-1]
+
+Definition : negative index accesses items from the end of a list. [-1] = last item
+Example : line.split()[-1] gets the last word of a line — useful for status codes in logs
+
+enumerate() with start value
+
+Definition : enumerate(list, 1) gives index + value pairs, starting count at 1 instead of 0
+Example : for i, (word, count) in enumerate(sorted_words[:5], 1): print(f'{i}. {word}')
+
+extracting fields from structured text
+
+Definition : log files are space-separated. line.split()[0] gets first field (IP), line.split()[-1] gets last field (status code)
+Example : ip = line.split()[0] extracts IP from '192.168.1.1 - - [date] "GET /" 200'

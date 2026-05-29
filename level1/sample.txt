@@ -1,0 +1,6 @@
+Python is a powerful programming language.
+It is used in cybersecurity, data science, and web development.
+Many hackers and security professionals use Python daily.
+Python is easy to learn but hard to master.
+Every cybersecurity professional should know Python.
+Learning Python opens many doors in the security field.

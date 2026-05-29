@@ -14,10 +14,13 @@ for word in words:
 #     print(f"{word} : {count}")
 
 sorted_words = sorted(word_count.items(), 
-                      key=lambda x: x[1], 
+                      key=lambda x: x[1], #function in short  #def get_count(x): /n return x[1]
+                      # x[0] = the word → 'python' x[1] = theh count → 4
                       reverse=True)
 
 print('Top 3 words')
 
-for word, count in sorted_words[:3]:
+for word, count in sorted_words[:3]: #[:3] → first 3 items
    print(f'{word} : {count}')
+
+

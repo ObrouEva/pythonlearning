@@ -83,3 +83,34 @@ Bug — Text Analyzer Step 2
 Bug : numbered output not printed (1. 2. 3.)
 Cause : missed detail in the exercise requirements
 Fix : use enumerate() or a counter variable to add numbers before each line
+
+Bug — Text Analyzer Step 4
+
+Bug : opened sample.txt with 'w' mode instead of 'r'
+Cause : confused read and write modes — 'w' overwrites the file
+Fix : use 'r' to read existing files, 'w' only when creating output files
+
+Bug — Text Analyzer Step 4
+
+Bug : FileNotFoundError when opening sample.txt
+Cause : file was not in the same folder as the script
+Fix : either use full path or make sure file is in same directory as script
+
+Bug — Text Analyzer Step 5
+
+Bug : wrote report to sample.txt instead of report.txt
+Cause : used same filename for both input and output — 'w' mode destroyed original data
+Fix : always use a separate filename for output files
+
+Bug — Text Analyzer Step 6
+
+Bug : IP extracted with line[i][0:12] — character slice instead of split
+Cause : hardcoded slice breaks for IPs of different lengths
+Fix : use line.split()[0] to always get the first word regardless of length
+
+Bug — Text Analyzer Step 6
+
+Bug : looping over full lines but treating them as IPs in dictionary
+Cause : variable naming confusion — ip was actually a full log line
+Fix : extract IP first with line.split()[0], then use that in the dictionary
+

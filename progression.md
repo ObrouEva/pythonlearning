@@ -10,6 +10,8 @@
 
 - [ ] Text Analyzer
 35% mastery — Steps 1 & 2 complete, dictionaries and sorted() understood, steps 3-6 remaining
+75% mastery — Steps 1-5 complete, Step 6 mini exam in progress, IP extraction pattern understood but not yet implemented
+
 - [ ] Log Parser
 - [ ] Todo CLI
 - [ ] Calculator CLI
