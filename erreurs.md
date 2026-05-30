@@ -114,3 +114,26 @@ Bug : looping over full lines but treating them as IPs in dictionary
 Cause : variable naming confusion — ip was actually a full log line
 Fix : extract IP first with line.split()[0], then use that in the dictionary
 
+Bug — Text Analyzer Step 6
+
+Bug : lines.split()[0] instead of line.split()[0] inside loop
+Cause : confusion between lines (the full list) and line (one item from the loop)
+Fix : inside a for line in lines loop, always use line for the current item
+
+Bug — Text Analyzer Step 6
+
+Bug : IndexError: list index out of range on line.split()[0]
+Cause : empty string '' at end of file after split('\n') — .split()[0] crashes on empty string
+Fix : add if line == '': continue at top of loop to skip empty lines
+
+Bug — Text Analyzer Step 6
+
+Bug : status code check used int comparison == 404 instead of string == '404'
+Cause : line.split()[-1] returns a string, not an integer
+Fix : always use quotes when comparing to values extracted from text
+
+Bug — Text Analyzer Step 6
+
+Bug : total_request = len(lines) counted the empty line
+Cause : empty line created by split('\n') was included in the count
+Fix : initialize total_request = 0 and increment inside the loop after the empty line check

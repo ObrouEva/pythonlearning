@@ -126,3 +126,18 @@ extracting fields from structured text
 
 Definition : log files are space-separated. line.split()[0] gets first field (IP), line.split()[-1] gets last field (status code)
 Example : ip = line.split()[0] extracts IP from '192.168.1.1 - - [date] "GET /" 200'
+
+continue — skip current loop iteration
+
+Definition : continue skips the rest of the current loop iteration and moves to the next one
+Example : if line == '': continue skips empty lines without crashing
+
+log parsing — extracting fields
+
+Definition : log lines are space-separated. Use split()[0] for first field, split()[-1] for last field
+Example : ip = line.split()[0] → '192.168.1.1', status = line.split()[-1] → '200'
+
+counting inside a loop vs len()
+
+Definition : when you need to count only valid items, increment a counter inside the loop instead of using len() on the whole list
+Example : total = 0 then total += 1 inside loop after empty line check
