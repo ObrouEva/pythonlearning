@@ -137,3 +137,27 @@ Bug — Text Analyzer Step 6
 Bug : total_request = len(lines) counted the empty line
 Cause : empty line created by split('\n') was included in the count
 Fix : initialize total_request = 0 and increment inside the loop after the empty line check
+
+Bug — Log Parser Exercise 3
+
+Bug : status and ip extraction placed outside the for loop
+Cause : indentation error — code fell outside loop scope
+Fix : ensure all line processing is indented inside the for loop
+
+Bug — Log Parser Exercise 3
+
+Bug : if status == '404' instead of if status:
+Cause : treating match object like a string — re.search() returns a match object or None, not a string
+Fix : use if status: to check if match was found, then status.group() to get the text
+
+Bug — Log Parser Exercise 4
+
+Bug : ip_count = {} inside the loop — reset on every iteration
+Cause : dictionary initialized inside loop instead of before it
+Fix : always initialize dictionaries before the loop
+
+Bug — Log Parser Exercise 6
+
+Bug : TypeError: '>=' not supported between instances of 'str' and 'int'
+Cause : comparing ip (a string from dictionary key) with 3 (an int) — variable name ip was reused in the loop shadowing the original
+Fix : use count >= 3 not ip >= 3 — count is the integer value

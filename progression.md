@@ -8,12 +8,15 @@
 
 
 
-- [ ] Text Analyzer
+- [x] Text Analyzer
 35% mastery — Steps 1 & 2 complete, dictionaries and sorted() understood, steps 3-6 remaining
 75% mastery — Steps 1-5 complete, Step 6 mini exam in progress, IP extraction pattern understood but not yet implemented
 90% mastery — All 6 steps complete including log analyzer mini exam, strong on dictionaries and file parsing, occasionally confuses line vs lines variable naming
 
-- [ ] Log Parser
+
+- [x] Log Parser
+95% mastery — All 6 exercises complete including suspicious IP detection, strong on regex and file parsing, occasional indentation slips and str/int comparison errors
+
 - [ ] Todo CLI
 - [ ] Calculator CLI
 - [ ] File Organizer

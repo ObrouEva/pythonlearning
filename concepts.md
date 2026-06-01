@@ -141,3 +141,23 @@ counting inside a loop vs len()
 
 Definition : when you need to count only valid items, increment a counter inside the loop instead of using len() on the whole list
 Example : total = 0 then total += 1 inside loop after empty line check
+
+re.search() vs re.findall()
+
+Definition : re.findall() returns all matches as a list. re.search() returns the first match as a match object or None
+Example : re.findall(r'\d+', text) → ['192', '168'] / re.search(r'\d+', text).group() → '192'
+
+match object and .group()
+
+Definition : re.search() returns a match object, not a string. .group() extracts the actual matched text
+Example : match = re.search(r'\d+\.\d+\.\d+\.\d+', line) then match.group() → '192.168.1.1'
+
+regex OR operator
+
+Definition : | means OR in regex — matches either pattern
+Example : re.search(r'404|403', line) matches lines containing 404 or 403
+
+regex special characters
+
+Definition : \d = one digit, \d+ = one or more digits, \. = literal dot, | = or, r'' = raw string
+Example : r'\d+\.\d+\.\d+\.\d+' matches any IP address pattern
