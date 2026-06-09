@@ -11,14 +11,13 @@ capable of building my own security tools, automating tasks,
 and thinking like a real security engineer.
 
 ## Structure
-python-learning/
-├── level1/    # Python Foundations
-├── level2/    # Automation & Scripting
-├── level3/    # Networking & Cyber Foundations
-├── level4/    # Security Tooling
-├── level5/    # Advanced Python
-├── level6/    # Real Engineer Projects
 
+- level1/ — Python Foundations
+- level2/ — Automation & Scripting
+- level3/ — Networking & Cyber Foundations
+- level4/ — Security Tooling
+- level5/ — Advanced Python
+- level6/ — Real Engineer Projects
 
 ## Curriculum
 
