@@ -1,22 +1,10 @@
 # My Python Cybersecurity Progression
 
 ## Level 1 - Python Foundations
-- [x] Password Generator -—
-40% mastery — Steps 1 & 2 in progress, bug on pool building and bool conversion not yet mastered  
-70% mastery — Steps 1-4 complete, mini challenge done, score function has bugs being fixed
-95% mastery — All 6 steps complete including mini exam, clean refactored functions, file writing, minor typo in calculate_score function name
-
-
-
-- [x] Text Analyzer
-35% mastery — Steps 1 & 2 complete, dictionaries and sorted() understood, steps 3-6 remaining
-75% mastery — Steps 1-5 complete, Step 6 mini exam in progress, IP extraction pattern understood but not yet implemented
-90% mastery — All 6 steps complete including log analyzer mini exam, strong on dictionaries and file parsing, occasionally confuses line vs lines variable naming
-
-
-- [x] Log Parser
-95% mastery — All 6 exercises complete including suspicious IP detection, strong on regex and file parsing, occasional indentation slips and str/int comparison errors
-
+- [ ] Password Generator 
+75% mastery — completed steps 1-4 + mini challenge, refactor into main() functions pending
+- [ ] Text Analyzer
+- [ ] Log Parser
 - [ ] Todo CLI
 - [ ] Calculator CLI
 - [ ] File Organizer
