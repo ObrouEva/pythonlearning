@@ -58,3 +58,23 @@ Example : for _ in range(10): means "repeat 10 times, I don't need the counter"
 list.append()
 Definition : adds one item to the end of a list
 Example : guaranteed = [] → guaranteed.append('7') → ['7']
+
+dictionary — counting pattern
+Definition : use a dict to count occurrences — check if key exists, add 1 or start at 1
+Example : if word in counts: counts[word] += 1 else: counts[word] = 1
+
+sorted() with lambda
+Definition : sorts a list by a specific element using a mini anonymous function
+Example : sorted(counts.items(), key=lambda x: x[1], reverse=True) sorts by count highest first
+
+str.strip()
+Definition : removes specified characters from the edges of a string
+Example : 'python,'.strip('.,!?') → 'python'
+
+with open() — read mode
+Definition : opens a file safely and closes it automatically even if something crashes
+Example : with open('file.txt', 'r') as f: text = f.read()
+
+enumerate() / manual counter
+Definition : tracks position in a loop
+Example : i = 1 / i += 1 inside loop to number items 1, 2, 3...

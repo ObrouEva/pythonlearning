@@ -43,3 +43,13 @@ Fix : use range(1, 11) to get 1 to 10
 Bug : print() had wrong indentation inside with block
 Cause : print was inside the with block instead of after it
 Fix : dedent print to same level as with open(...)
+
+Bug — Text Analyzer Step 4
+Bug : FileNotFoundError: No such file or directory: 'sample.txt'
+Cause : Python looks for the file relative to where the script is run from, not where the script lives
+Fix : use full relative path 'niv1/text_analyser/sample.txt' or cd into the correct folder before running
+
+Bug — Text Analyzer Step 5
+Bug : python, and python counted as different words
+Cause : .split() doesn't remove punctuation — comma stays attached to word
+Fix : word.strip('.,!?;:') before counting
