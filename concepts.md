@@ -78,3 +78,16 @@ Example : with open('file.txt', 'r') as f: text = f.read()
 enumerate() / manual counter
 Definition : tracks position in a loop
 Example : i = 1 / i += 1 inside loop to number items 1, 2, 3...
+
+for line in f vs f.read()
+Definition : f.read() loads entire file as one string; for line in f reads one line at a time — can't combine both on same file handle
+Example : text = f.read() then for line in text.split('\n'): to loop over lines
+
+'substring' in string
+Definition : checks if a string contains another string, returns True or False
+Example : 'ERROR' in line → True if the word ERROR appears anywhere in that line
+
+word[0].isdigit()
+Definition : checks if the first character of a string is a digit
+Example : '2024-01-15'[0].isdigit() → True — used to filter out dates and numbers
+

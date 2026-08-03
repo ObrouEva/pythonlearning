@@ -3,10 +3,11 @@
 ## Level 1 - Python Foundations
 - [x] Password Generator 
 75% mastery — completed steps 1-4 + mini challenge, refactor into main() functions pending
-90% mastery — all 6 steps complete including mini exam, refactor, and 5 version comparisons
+100% mastery — all 6 steps complete including mini exam, refactor, and 5 version comparisons
 
-- [ ] Text Analyzer
+- [x] Text Analyzer
 90% mastery — steps 1-5 complete, mini exam pending, solid grasp of dictionaries and file reading
+100% mastery — all steps complete including mini exam, analyzed real log file, word frequency, ERROR/WARNING/INFO counts
 - [ ] Log Parser
 - [ ] Todo CLI
 - [ ] Calculator CLI

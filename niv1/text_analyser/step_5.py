@@ -8,6 +8,7 @@ sentences = 0
 for char in text:
     if char in '.?!':
         sentences += 1
+        
 counts = {}
 for word in words:
     word = word.strip('.,!?;:') # remove punctuation from edges

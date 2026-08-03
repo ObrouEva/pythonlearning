@@ -53,3 +53,13 @@ Bug — Text Analyzer Step 5
 Bug : python, and python counted as different words
 Cause : .split() doesn't remove punctuation — comma stays attached to word
 Fix : word.strip('.,!?;:') before counting
+
+Bug — Text Analyzer Mini Exam
+Bug : for line in f after f.read() returned nothing
+Cause : f.read() moves cursor to end of file — nothing left to read
+Fix : use text.split('\n') to get lines from the string, loop over that instead
+
+Bug — Text Analyzer Mini Exam
+Bug : dates like 2024-01-15 appearing in top words
+Cause : len(word) > 2 filter doesn't exclude numbers
+Fix : add and not word[0].isdigit() to skip words starting with a digit
