@@ -63,3 +63,23 @@ Bug — Text Analyzer Mini Exam
 Bug : dates like 2024-01-15 appearing in top words
 Cause : len(word) > 2 filter doesn't exclude numbers
 Fix : add and not word[0].isdigit() to skip words starting with a digit
+
+Bug — Log Parser Step 4
+Bug : counts = {} inside the loop reset dictionary every iteration
+Cause : wrong indentation — dictionary must be defined before the loop
+Fix : move counts = {} outside the loop
+
+Bug — Log Parser Step 4
+Bug : ip (match object) used as dictionary key instead of ip_str (string)
+Cause : forgot to call .group() to extract the string from the match object
+Fix : always extract with ip_str = ip.group() then use ip_str as key
+
+Bug — Log Parser Step 5
+Bug : error lines section only checked last line instead of all lines
+Cause : second loop missing — only checked ip, date, status from last iteration
+Fix : add a second for line in lines loop for the error lines section
+
+Bug — Log Parser Mini Exam
+Bug : error counting block outside if ip and date and status check
+Cause : wrong indentation — status.group(1) called on potential None
+Fix : move error counting inside the if ip and date and status block

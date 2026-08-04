@@ -1,0 +1,35 @@
+import re
+
+with open('level1/03 Log Parser/access.log', 'r') as f:
+  text = f.read()
+
+lines = text.split('\n')
+counts = {}
+error_counts = {}
+
+with open('level1/03 Log Parser/mini_exam/suspicious.txt', 'w') as f:
+  for line in lines:
+    ip = re.search(r'\d+\.\d+\.\d+\.\d+', line)
+    date = re.search(r'\[(\d+/\w+/\d+:\d+:\d+:\d+)\]', line)
+    status = re.search(r'" (\d{3}) ', line)
+    if ip and date and status:
+      ip_str = ip.group()   
+      # count requests
+      if ip_str in counts:
+            counts[ip_str] += 1
+      else:
+            counts[ip_str] = 1
+      # count errors
+      if status.group(1) in ('404', '500'):
+          if ip_str in error_counts:
+              error_counts[ip_str] += 1
+          else:
+              error_counts[ip_str] = 1
+   # after the loop
+  f.write('===== Suspicious IPs =====\n')
+  for ip_str, req_count in counts.items():
+      err_count = error_counts.get(ip_str, 0)  # 0 if no errors
+      if req_count >= 3 or err_count >= 2:
+          f.write(f'{ip_str} — {req_count} requests, {err_count} errors\n')
+  f.write('==========================')
+

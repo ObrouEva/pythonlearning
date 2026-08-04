@@ -8,7 +8,10 @@
 - [x] Text Analyzer
 90% mastery — steps 1-5 complete, mini exam pending, solid grasp of dictionaries and file reading
 100% mastery — all steps complete including mini exam, analyzed real log file, word frequency, ERROR/WARNING/INFO counts
-- [ ] Log Parser
+
+- [x] Log Parser
+100% mastery — all 6 steps complete including mini exam, regex extraction, suspicious IP detection, report saved to file
+
 - [ ] Todo CLI
 - [ ] Calculator CLI
 - [ ] File Organizer

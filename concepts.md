@@ -91,3 +91,22 @@ word[0].isdigit()
 Definition : checks if the first character of a string is a digit
 Example : '2024-01-15'[0].isdigit() → True — used to filter out dates and numbers
 
+import re — regex basics
+Definition : module for pattern matching inside strings when you don't know the exact value
+Example : re.search(r'\d+\.\d+\.\d+\.\d+', line) finds an IP address
+
+regex patterns
+Definition : \d = any digit, \d+ = one or more digits, \. = literal dot, \d{3} = exactly 3 digits
+Example : r'\d+\.\d+\.\d+\.\d+' matches any IP like 192.168.1.
+
+re.search() + .group()
+Definition : finds first match of pattern in string, .group() extracts the matched text, .group(1) extracts first capture group
+Example : match = re.search(r'\d{3}', line) then match.group() → '404'
+
+capture groups ()
+Definition : parentheses in a regex pattern create a group you can extract separately with .group(1)
+Example : re.search(r'\[(\d+/\w+/\d+)\]', line).group(1) extracts date without brackets
+
+dict.get(key, default)
+Definition : safely retrieves a value from a dict, returns default if key doesn't exist instead of crashing
+Example : error_counts.get(ip_str, 0) returns 0 if IP has no errors
