@@ -83,3 +83,24 @@ Bug — Log Parser Mini Exam
 Bug : error counting block outside if ip and date and status check
 Cause : wrong indentation — status.group(1) called on potential None
 Fix : move error counting inside the if ip and date and status block
+
+Bug — Todo CLI Step 1
+Bug : tasks = input('Add tasks: ') overwrote the list with a string
+Cause : used same variable name for the list and the new task input
+Fix : use separate variable task = input(...) then tasks.append(task)
+
+Bug — Todo CLI Step 1
+Bug : tasks.append() called with no argument
+Cause : forgot to pass the new task as argument
+Fix : tasks.append(task)
+
+Bug — Todo CLI Step 1
+Bug : if number in i used to validate task number
+Cause : i is enumerate loop variable, doesn't exist outside the loop
+Fix : if 1 <= number <= len(tasks) to check valid range
+
+Bug — Todo CLI Step 1
+Bug : break after tasks.pop() exited the whole program
+Cause : confused break (exits loop) with continuing the menu
+Fix : remove break — after removing a task, loop continues naturally
+

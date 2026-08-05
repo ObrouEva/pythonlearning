@@ -110,3 +110,23 @@ Example : re.search(r'\[(\d+/\w+/\d+)\]', line).group(1) extracts date without b
 dict.get(key, default)
 Definition : safely retrieves a value from a dict, returns default if key doesn't exist instead of crashing
 Example : error_counts.get(ip_str, 0) returns 0 if IP has no errors
+
+list.append(item)
+Definition : adds one item to the end of a list
+Example : tasks.append('Buy groceries') → adds task to list
+
+list.pop(index)
+Definition : removes and returns item at given index
+Example : tasks.pop(0) removes first item, tasks.pop(number - 1) for 1-based user input
+
+enumerate(list, start)
+Definition : loops over a list giving both index and value, start sets the starting number
+Example : for i, task in enumerate(tasks, 1): → numbered list starting at 1
+
+if not list
+Definition : checks if a list is empty — returns True if empty
+Example : if not tasks: print('No tasks.')
+
+json.dump() / json.load()
+Definition : saves Python object to JSON file / loads JSON file back into Python object
+Example : json.dump(tasks, f) saves list, json.load(f) loads it back

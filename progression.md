@@ -12,7 +12,8 @@
 - [x] Log Parser
 100% mastery — all 6 steps complete including mini exam, regex extraction, suspicious IP detection, report saved to file
 
-- [ ] Todo CLI
+- [X] Todo CLI
+30% mastery — step 1 complete, menu loop working, add/view/remove tasks in memory, step 2 JSON persistence pending
 - [ ] Calculator CLI
 - [ ] File Organizer
 - [ ] Mini Shell Utilities
