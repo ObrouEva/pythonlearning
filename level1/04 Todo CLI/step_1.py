@@ -1,14 +1,14 @@
-tasks = []
+tasks = [] # empty list - this is where all thasks will live during the session
 
-while True:
-  try: 
-      print('\n=== Todo CLI ===')
+while True: #loop forever - keeps the menu running until the user quit
+  try: #attempt everything inside - if something crashes, catch it below with except ValueError
+      print('\n=== Todo CLI ===') #(\n = new line before the menu so it doesn't look cramped)
       print('1. Add task')
       print('2. View tasks')
       print('3. Remove task')
       print('4. Quit ')
 
-      choice = input('Choose: ')
+      choice = input('Choose: ') #ask the user to pick 1,2,3 or 4 - stored as a string
 
       if choice == '1':
         task = input('Add tasks: ')
@@ -16,6 +16,7 @@ while True:
       elif choice == '2':
         for i, task in enumerate(tasks, 1):
             print(f'{i}. {task}')
+        #loop over tasks - 'i' is the the number starting at 1
       elif choice == '3':
         if not tasks:
           print('No tasks to remove.')
@@ -27,5 +28,6 @@ while True:
               print('Invalid task number.')
       elif choice == '4':
          break
-  except ValueError:
+  except ValueError: # catch the crash HERE instead of stopping the program
      print('Choose between 1,2,3 and 4.')
+     # tell the user what wen wrong, thent eh while True loop continues

@@ -104,3 +104,33 @@ Bug : break after tasks.pop() exited the whole program
 Cause : confused break (exits loop) with continuing the menu
 Fix : remove break — after removing a task, loop continues naturally
 
+Bug — Todo CLI Step 3
+Bug : tasks = input('Add tasks: ') overwrote the list
+Cause : used same variable name for list and new input
+Fix : use task = input(...) then tasks.append(task)
+
+Bug — Todo CLI Step 4
+Bug : tasks['status'] == 'pending' on a list instead of a dict item
+Cause : forgot to access by index first
+Fix : tasks[number - 1]['status'] = 'done'
+
+Bug — Todo CLI Mini Exam
+Bug : duplicate key 'status' in dictionary — 'status': severity overwritten by 'status': 'open'
+Cause : copy-paste error, meant to write 'severity': severity
+Fix : use correct key names — 'severity' and 'status' separately
+
+Bug — Todo CLI Mini Exam
+Bug : mark_as_resolved() updated severity instead of status
+Cause : wrong key name — vulns[number-1]['severity'] = 'resolved'
+Fix : vulns[number-1]['status'] = 'resolved'
+
+Bug — Todo CLI Mini Exam
+Bug : show_open() checked vuln['severity'] == 'open' instead of vuln['status']
+Cause : confused severity and status fields
+Fix : always check vuln['status'] for open/resolved
+
+Bug — Todo CLI Mini Exam
+Bug : load_vulns(vulns) had an unnecessary parameter
+Cause : copy-paste from a function that needed a parameter
+Fix : load_vulns() takes no parameters — it loads from file and returns the list
+

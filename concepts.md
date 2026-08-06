@@ -130,3 +130,27 @@ Example : if not tasks: print('No tasks.')
 json.dump() / json.load()
 Definition : saves Python object to JSON file / loads JSON file back into Python object
 Example : json.dump(tasks, f) saves list, json.load(f) loads it back
+
+list of dictionaries
+Definition : each item in the list is a dictionary with multiple fields — used when each item needs more than one property
+Example : tasks = [{'name': 'Do dishes', 'priority': 'high', 'status': 'pending'}]
+
+updating a dictionary value
+Definition : assign a new value to an existing key using bracket notation
+Example : tasks[number - 1]['status'] = 'done' — access by index first, then update key
+
+try/except FileNotFoundError
+Definition : handles case where file doesn't exist yet — returns empty list instead of crashing
+Example : except FileNotFoundError: return []
+
+sum() with condition
+Definition : counts items in a list that match a condition — shorter than a manual loop
+Example : sum(1 for v in vulns if v['status'] == 'open') counts open vulns
+
+if/elif vs if/if
+Definition : elif stops checking after first match — if checks every condition every time
+Example : use elif for menu options so Python doesn't check all options on every input
+
+try/except vs while True
+Definition : try/except catches crashes, while True + if handles wrong but valid input
+Example : int() crash → try/except; wrong priority word → while True + if

@@ -14,10 +14,13 @@
 
 - [X] Todo CLI
 30% mastery — step 1 complete, menu loop working, add/view/remove tasks in memory, step 2 JSON persistence pending
+100% mastery — all steps complete including mini exam vulnerability tracker, JSON persistence, dictionary lists, refactored into clean functions
+
 - [ ] Calculator CLI
 - [ ] File Organizer
 - [ ] Mini Shell Utilities
 - [ ] EXAM : Security Toolkit CLI
+
 
 ## Level 2 - Automation & Scripting
 - [ ] Backup Automation
